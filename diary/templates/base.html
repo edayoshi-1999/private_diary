@@ -32,11 +32,20 @@
                     <a class="navbar-brand" href="{% url 'diary:index' %}">Private Diary</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
-                        
+                        <!--ナビゲーションバーの左側-->
                         <ul class="navbar-nav me-auto">
-                            <li class="nav-item"><a class="nav-link{% block active_inquiry %}{% endblock %}" href="{% url 'diary:inquiry' %}">INQUIRY</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link{% block active_inquiry %}{% endblock %}" href="{% url 'diary:inquiry' %}">INQUIRY</a>
+                            </li>
+                           
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link{% block active_diary_list %}{% endblock %}" href="{% url 'diary:diary_list' %}">DIARY LIST</a>
+                            </li>
+                            {% endif %}
                         </ul>
 
+                        <!--ナビゲーションバーの右側-->
                         <ul class="navbar-nav ms-auto">
                             {% if user.is_authenticated %}
                                 <li class="nav-item">
@@ -50,6 +59,7 @@
                                     <a class="nav-link {% block active_login %}{% endblock %}" href="{% url 'account_login' %}">Log In</a>
                                 </li>
                             {% endif %}
+                            
                         </ul>
                     </div>
                 </div>

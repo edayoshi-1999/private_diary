@@ -18,4 +18,4 @@ class Diary (models.Model):
         verbose_name_plural = "Diary"
 
     def __str__(self):
-        return self.titleq
+        return self.title
