@@ -12,10 +12,10 @@
             
             {% if confirmation %}
                 <p>ユーザー登録を確定するには、以下のボタンを押してください</p>
-                <from method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
                     {% csrf_token %}
                     <button class="btn btn-primary" type="submit">確定</button>
-                </from>
+                </form>
             {% else %}
                 {% url 'account_email' as email_url %}
                 <p>リンクの有効期限が切れてます<a href="{{ email_url }}">再申請</a></p>
