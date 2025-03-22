@@ -53,3 +53,5 @@ class Command(BaseCommand):
         if len(files) >= settings.NUM_SAVED_BACKUP:
             files.sort()
             os.remove(settings.BACKUP_PATH + files[0])
+        
+    
