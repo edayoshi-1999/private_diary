@@ -1,7 +1,7 @@
 from .settings_common import *
 
 # 本番運用環境用にセキュリティーキーを生成し環境変数から読み込む
-SECRET_KEY = os.environ.get("DJANGGO_SECRET_KEY")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # デバッグモードを有効にするかどうか
 DEBUG = False

@@ -197,4 +197,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'utaka0705@gmail.com'  # 自分のGmailアドレス
-EMAIL_HOST_PASSWORD = 'uqre dhff xhvt xvtx'  # アプリパスワード（16桁）
+EMAIL_HOST_PASSWORD = 'uqredhffxhvtxvtx'  # アプリパスワード（16桁）
