@@ -190,3 +190,11 @@ LOGIN_REDIRECT_URL = "diary:diary_list"
 # バックアップバッチ用
 BACKUP_PATH = "backup/"
 NUM_SAVED_BACKUP = 30
+
+# メール送信設定
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'utaka0705@gmail.com'  # 自分のGmailアドレス
+EMAIL_HOST_PASSWORD = 'uqre dhff xhvt xvtx'  # アプリパスワード（16桁）
