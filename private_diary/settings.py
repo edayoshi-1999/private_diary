@@ -1,7 +1,7 @@
 from .settings_common import *
 
 # 本番運用環境用にセキュリティーキーを生成し環境変数から読み込む
-SECRET_KEY = os.environ.get("DJANGGO_SECRET_KEY")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # デバッグモードを有効にするかどうか
 DEBUG = False
@@ -13,12 +13,12 @@ ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")]
 STATIC_ROOT = "/usr/share/nginx/html/static"
 MEDIA_ROOT = "/usr/share/nginx/html/media"
 
-# AMAZON SES関連設定
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-EMAIL_BACKEND = "django_ses.SESBackend"
-AWS_SES_REGION_NAME = "ap-northeast-1"
-AWS_SES_REGION_ENDPOINT = "email.ap-northeast-1.amazonaws.com"
+# # AMAZON SES関連設定
+# AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+# EMAIL_BACKEND = "django_ses.SESBackend"
+# AWS_SES_REGION_NAME = "ap-northeast-1"
+# AWS_SES_REGION_ENDPOINT = "email.ap-northeast-1.amazonaws.com"
 
 # ロギングの設定
 LOGGING = {
